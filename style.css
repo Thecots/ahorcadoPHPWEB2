@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #dae0e6;
+}
+
+h1{
+    padding: 10px;
+    font-weight: 400;
+    background: white;
+}
+
+.inputMain{
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputMain{
+    font-weight:500;
+    word-spacing: 10px;
+}
+
+
+main{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 100%;
+    width: 1500px;
+
+    display: grid;
+    grid-template-columns: 1fr 350px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.board{
+    margin-top: 35px;
+    width: 100%;
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+section.board img{
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.lbox{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lbox button{
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    font-weight: bolder;
+    border-radius: 3px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.lbox button:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+
+.lbox button:disabled{
+    background-color: rgb(190, 190, 190);
+    cursor: not-allowed;
+
+}
+
+.lbox button:active{
+    transform: scale(0.95);
+}
+
+section.letter {
+    margin-bottom: 35px;
+}
+
+.stats {
+    user-select: none;
+    margin: 35px;
+    background: #252525;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 35px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.stats .turn{
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    text-align: center;
+}
+
+
+.p1{
+    background: #0080ff;
+}
+.p2{
+    background: #91ff00;
+}
+
+.lives{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+
+.lives img{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.restart{
+    width: 260px;
+    height: 60px;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: rgb(236, 73, 73);
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    padding: 7px;
+    transition: transform 0.3s ease;
+    align-self: flex-end;
+    font-weight: 600;
+}
+
+.restart:active{
+    transform: scale(0.97);
+}
+
+.container.ce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* input */
+/* input */
+
+.text-field {
+    position: relative;
+    margin: .625rem 0rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input {
+    max-width: 100%;
+    width: 575px;
+    outline: none;
+    border: thin solid #dadce0;
+    color: rgb(0, 0, 0);
+    padding: .725rem .3125rem;
+    border-radius: .3125rem;
+}
+
+input:focus {
+    border:  .125rem solid #5a72fd;
+    background-color:#fff;
+}
+
+.label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: .625rem;
+    top: .725rem;
+    transition: 0.2s;
+     word-spacing: 1px;
+}
+
+input:focus ~ .label, input:valid ~ .label {
+    top: -0.625rem;
+    left: .625rem;
+    font-size: .9375rem;
+    background-color:#fff;
+    padding:0 .125rem 0 .3125rem;
+}
+
+input:focus ~ .label{
+    color: #5a72fd !important;
+}
+
+input:valid ~ .label{
+    color: #999;
+}
+
+.error input {
+    border: thin solid rgb(241, 32, 32);
+}
+    .error input:focus {
+        border:  .125rem solid rgb(241, 32, 32);
+    }
+.error .label {
+    color: red !important;
+}
+    .error input:focus ~ .label{
+        color: red !important;
+    }
+
+
+
+.btn-sa {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background: royalblue;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.btn-sa:active{
+    transform: scale(0.97);
+}
+
+section.comida{
+    padding: 0 26px;
+    max-width: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+}
+
+.gameBoard {
+    margin-left: 35px;
+}
+
+section.board p {
+    font-size: 41px;
+    letter-spacing: 5px;
+}
+
+
+.otherGame{
+display: flex;
+flex-direction: column;
+gap: 15px;
+
+}
+
+.otherPlayer{
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    text-align: center;
+    background: #91ff00;
+}
+
+
+.otherBoard{
+    background-color: white;
+
+}
+
+.otherBoard img{
+    width: 100%;
+    padding: 55px;
+    border-radius: 5px;
+}
+
+.otherLives{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+
+.otherLives img{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.p1{
+    background: #0080ff;
+}
+
+.text-r{
+    text-align: center;
+    background: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+
+.winnerrr{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 100%;
+    width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.winnerrr .xddd{
+    width: 250px;
+    padding:50px;
+}
+
+.winnerrr p {
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+
+.ppp{
+    color: rgb(26, 168, 21);
+    font-size: 25px;
+}
+
+.lll{
+    color: tomato;
+    font-size: 25px;
+}
+
+.winnerrr button{
+    margin: 90px 0;
+    grid-column: 1/3;
+    height: 60px;
+    font-size: 25px;
+    width: 300px;
+    justify-self: center;
+    background: lightgreen;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
